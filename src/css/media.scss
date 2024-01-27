@@ -1,0 +1,75 @@
+@import "helper.scss";
+
+@media print {
+  body {
+    margin: 0;
+
+    .article {
+      .section {
+        &.article__skills {
+          .charts {
+            flex-direction: column;
+
+            ul {
+              width: auto;
+            }
+
+            #radar {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    margin: 0;
+
+    .article {
+      width: auto;
+      height: auto;
+
+      .section {
+        img {
+          display: none;
+        }
+
+        &.article__skills {
+          .charts {
+            flex-direction: column;
+
+            ul {
+              width: auto;
+            }
+
+            #radar {
+              display: none;
+            }
+          }
+        }
+
+        &.article__work-experience,
+        &.article__internship-experience {
+          .title {
+            flex-wrap: wrap;
+          }
+        }
+
+        &.article__projects {
+          .detail__projects {
+            flex-wrap: wrap;
+          }
+        }
+
+        &.article__bio {
+          .info {
+            flex-direction: column;
+          }
+        }
+      }
+    }
+  }
+}

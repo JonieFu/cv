@@ -1,0 +1,190 @@
+@import "./helper.scss";
+
+.article {
+  .section {
+    padding: 4px 0;
+
+    &.article__header {
+      position: relative;
+
+      h1 {
+        font-size: 24px;
+        margin-top: 0;
+        text-align: center;
+      }
+
+      img {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+
+      p {
+        text-align: center;
+      }
+    }
+
+    &.article__education {
+      ul {
+        li {
+          &::before {
+            margin-right: 0.5em;
+            display: inline-block;
+            content: "\1F44D";
+          }
+        }
+      }
+    }
+
+    &.article__skills {
+      .charts {
+        display: flex;
+
+        ul {
+          width: 50%;
+
+          li {
+            &::before {
+              margin-right: 0.5em;
+              display: inline-block;
+              content: "\1F44C";
+            }
+          }
+        }
+      }
+    }
+
+    &.article__work-experience,
+    &.article__blogs,
+    &.article__internship-experience {
+      p {
+        margin: 4px 0;
+
+        &::before {
+          margin-right: 0.5em;
+          display: inline-block;
+          content: "•";
+        }
+      }
+
+      .title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .blogs__title {
+        display: flex;
+        flex-wrap: wrap;
+
+        .title__item {
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 1;
+          width: 22em;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          word-break: break-all;
+
+          &::before {
+            margin-left: 0.5em;
+            margin-right: 0.5em;
+            display: inline-block;
+            content: "∘";
+          }
+        }
+      }
+    }
+    &.article__volunteer,
+    &.article__work-experience {
+      ul {
+        li {
+          &::before {
+            margin-right: 0.5em;
+            display: inline-block;
+            content: "\1F44D";
+          }
+        }
+      }
+    }
+
+    &.article__projects,
+    &.article__open-source {
+      ul {
+        li {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          margin: 0 0 8px;
+
+          .detail {
+            .detail__projects {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+
+              h3::before {
+                margin-right: 0.5em;
+                display: inline-block;
+                content: "🌐";
+              }
+            }
+
+            .detail__open-source {
+              display: flex;
+              flex-direction: column;
+
+              h3::before {
+                margin-right: 0.5em;
+                display: inline-block;
+                content: "🧠";
+              }
+            }
+
+            p {
+              margin: 0;
+
+              &::before {
+                margin-right: 0.5em;
+                display: inline-block;
+                content: "•";
+              }
+            }
+          }
+
+          img {
+            width: 80px;
+          }
+        }
+      }
+    }
+
+    &.article__volunteer,
+    &.article__bio {
+      .info {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .papers-wrapper {
+        .papers {
+          li {
+            text-indent: 1em;
+            font-size: small;
+          }
+        }
+      }
+    }
+    &.article__volunteer{
+      ul {
+        li {
+          &::before {
+            margin-right: 0.5em;
+            display: inline-block;
+            content: "•";
+          }
+        }
+      }
+    }
+  }
+}
